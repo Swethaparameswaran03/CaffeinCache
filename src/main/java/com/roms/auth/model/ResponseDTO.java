@@ -1,16 +1,34 @@
 package com.roms.auth.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class ResponseDTO {
     private EmployeeDTO emp;
-    private UserDTO user;
-	
+    public EmployeeDTO getEmp() {
+return emp;
+}
+public void setEmp(EmployeeDTO emp) {
+this.emp = emp;
+}
+public UserDTO getUser() {
+return user;
+}
+public void setUser(UserDTO user) {
+this.user = user;
+}
+@Override
+public String toString() {
+return "ResponseDTO [emp=" + emp + ", user=" + user + "]";
+}
+public ResponseDTO(EmployeeDTO emp, UserDTO user) {
+super();
+this.emp = emp;
+this.user = user;
+}
+public ResponseDTO() {
+
+}
+private UserDTO user;
+
+
 }

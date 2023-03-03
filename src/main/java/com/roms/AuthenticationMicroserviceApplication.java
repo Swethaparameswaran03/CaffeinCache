@@ -22,7 +22,6 @@ import org.springframework.web.client.RestTemplate;
  
 
 @SpringBootApplication
-@EnableAutoConfiguration(exclude= {DataSourceAutoConfiguration.class})
 @EnableCaching
 public class AuthenticationMicroserviceApplication {
 	public static void main(String[] args) throws RestClientException, IOException {
